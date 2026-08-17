@@ -74,14 +74,14 @@ Vas a ver el carrito con tres productos y su total.
 
 **P1** — Calculá a mano el total esperado: Leche ($350 x2) + Pan ($200 x3) + Queso ($1500 x1).
 
-> R: (escribí el total esperado)
+> R:2800
 
 **P2** — ¿El total que imprime el programa coincide con lo que calculaste? Si no coincide, ¿cuánto muestra?
 
 > R:
 
 ```
-TOTAL_PROGRAMA=
+TOTAL_PROGRAMA=2050
 ```
 _(escribí el número que imprimió el programa)_
 
