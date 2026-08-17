@@ -78,7 +78,7 @@ Vas a ver el carrito con tres productos y su total.
 
 **P2** — ¿El total que imprime el programa coincide con lo que calculaste? Si no coincide, ¿cuánto muestra?
 
-> R:
+> R:2050 
 
 ```
 TOTAL_PROGRAMA=2050
