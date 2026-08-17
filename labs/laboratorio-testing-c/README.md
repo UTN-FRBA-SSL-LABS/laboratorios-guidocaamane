@@ -131,7 +131,7 @@ Mirá el código en `tests/test_unitarios.c` para entender la estructura de un t
 
 **P3** — ¿Qué hace `carrito_init` y por qué es importante llamarla antes de usar el carrito?
 
-> R:
+> R:acepta un puntero a una variable (Carrito) y le modifica el valor de cantidad a cero. Esto es para asegurar que el carrito este vacio.
 
 ---
 
