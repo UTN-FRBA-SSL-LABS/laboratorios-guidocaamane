@@ -46,7 +46,7 @@ void test_total_con_cantidad(void) {
     carrito_init(&c);
     Producto p = {"Leche", 350, 2};  /* 350 x 2 = 700 */
     carrito_agregar(&c, p);
-    ASSERT_IGUAL(700, carrito_total(&c));  /* <-- completar el valor esperado */
+    ASSERT_IGUAL(700, carrito_total(&c));  
 }
 /* ═══════════════════════════════════════════════════════════════════════════
  *  PARTE C — Escribir un test propio (ver README.md, Parte 7)
