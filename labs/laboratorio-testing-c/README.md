@@ -131,7 +131,7 @@ Mirá el código en `tests/test_unitarios.c` para entender la estructura de un t
 
 **P3** — ¿Qué hace `carrito_init` y por qué es importante llamarla antes de usar el carrito?
 
-> R:acepta un puntero a una variable (Carrito) y le modifica el valor de cantidad a cero. Esto es para asegurar que el carrito este vacio.
+> R:Acepta un puntero a una variable (Carrito) y le modifica el valor de cantidad a cero. Esto es para asegurar que el carrito este vacio.
 
 ---
 
@@ -351,27 +351,27 @@ _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 
 **P11** — ¿Qué diferencia hay entre un test unitario y uno de integración? ¿Cuál de los dos detectó primero el bug de `carrito_total`?
 
-> R:
+> R:Los tests unitarios agregan un unico elemento y analizan el comportamiento que tiene de forma aislada en cada funcion. Por ejemplo el test inicial de test_carrito_nuevo simplemente verifica que se haya creado correctamente el carrito. Mientras que en el de integracion se verifica el funcionamiento entrelazado y continuado de un funcionamiento mas real. El BUG de carrito_total fue encontrado en los testeos unitarios, al realizar el test_total_con_cantidad.
 
 **P12** — El bug de capacidad en `carrito_agregar` causa un **buffer overflow**: se escribe más allá del array. ¿Por qué esto es peligroso en C pero no ocurriría en un lenguaje como Python o Java?
 
-> R:
+> R:C no realiza checkeos de Buffer Overflow, y su peligro es que intenta escribir mas alla del tamaño reservado para la variable. Lo que proboca un comportamiento indefinido donde se pueden corromper datos. Y en caso de venir de un input externo puede ser explotado como una vulnerabilidad.
 
 **P13** — En este laboratorio encontraste los bugs escribiendo tests. ¿Qué tiene de mejor este enfoque frente a mirar el código directamente?
 
-> R:
+> R:Los tests permiten de manera practica demostrar el funcionamiento del codigo. Dado que los casos frontera son dificiles de encontrar a simple vista, un test permite encontrar errores como el de carrito_agregar donde se tenia un overflow.
 
 **P14** — El test `test_total_precio_unitario` (cantidad = 1) **pasó** a pesar del bug, mientras que `test_total_con_cantidad` (cantidad = 2) **falló**. ¿Por qué el primer test no detectó el bug?
 
-> R:
+> R:Porque el BUG se encontraba en el momento de sumar la cantidades de ese mismo producto.
 
 ```
-BUG_EN_FUNCION_1=
+BUG_EN_FUNCION_1=carrito_total
 ```
 _(nombre de la función con el primer bug)_
 
 ```
-BUG_EN_FUNCION_2=
+BUG_EN_FUNCION_2=carrito_agregar
 ```
 _(nombre de la función con el segundo bug)_
 
