@@ -319,7 +319,7 @@ Escribí `test_agregar_hasta_llenar()` en el lugar `/* PARTE E */`. Este test de
 Descomentá `/* test_agregar_hasta_llenar(); */` en el `main()`, compilá y corré.
 
 ```
-TEST_LLENAR_PASA=
+TEST_LLENAR_PASA=SI
 ```
 _(SI o NO)_
 
@@ -341,7 +341,7 @@ Las líneas con `#####` nunca se ejecutaron — no están cubiertas por los test
 > R:
 
 ```
-COBERTURA_COMPLETA=
+COBERTURA_COMPLETA=NO
 ```
 _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 

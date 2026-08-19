@@ -25,13 +25,31 @@ void test_compra_con_descuento(){
  *  PARTE E — Disenar un test propio (ver README.md, Parte 9)
  * ═══════════════════════════════════════════════════════════════════════════ */
 
-/* TODO: escribir test_agregar_hasta_llenar() */
+void test_agregar_hasta_llenar(){
+    Carrito c;
+    carrito_init(&c);
+    Producto p = {"Leche", 350, 1};
+    while (c.cantidad<MAX_ITEMS){
+        printf("\nAgrega producto %d:", c.cantidad);
+        carrito_agregar(&c,p);
+    }
+    printf("\nVerificacion de conteo MAX_ITEMS\n");
+    ASSERT_IGUAL(MAX_ITEMS,c.cantidad);
+    printf("Intentando exceder el MAX\n");
+    ASSERT_IGUAL(0,carrito_agregar(&c,p));
+    ASSERT_IGUAL(MAX_ITEMS,c.cantidad);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ *  main
+ * ═══════════════════════════════════════════════════════════════════════════ */
 
 int main(void) {
     printf("=== Tests de integracion ===");
     /* Descomentar a medida que agregues las funciones: */
     test_compra_con_descuento();
-    /* test_agregar_hasta_llenar();  */
+    test_agregar_hasta_llenar();
     RESUMEN();
     return EXIT_CODE();
 }
