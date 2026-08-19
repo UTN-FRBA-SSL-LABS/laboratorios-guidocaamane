@@ -338,7 +338,7 @@ Las líneas con `#####` nunca se ejecutaron — no están cubiertas por los test
 
 **P10** — ¿Hay alguna línea de `carrito.c` con `#####`? ¿Cuál y por qué no se ejecutó?
 
-> R:
+> R:Si, las lineas 29 y 30. Porque el test que utiliza el descuento esta ubicado en test_integracion.c
 
 ```
 COBERTURA_COMPLETA=NO
