@@ -6,7 +6,7 @@ void carrito_init(Carrito *c) {
 }
 
 int carrito_agregar(Carrito *c, Producto p) {
-    if (c->cantidad <= MAX_ITEMS) {   /* BUG: deberia ser < MAX_ITEMS */
+    if (c->cantidad < MAX_ITEMS) {   /* BUG: deberia ser < MAX_ITEMS */
         c->items[c->cantidad] = p;
         c->cantidad++;
         return 1;
