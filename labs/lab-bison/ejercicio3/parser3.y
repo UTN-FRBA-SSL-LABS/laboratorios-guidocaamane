@@ -47,7 +47,7 @@ exp:
   | exp '*' exp           { $$ = $1 * $3; }
   | exp '/' exp           { $$ = $1 / $3; }
   | exp POW exp           { $$ = (int)pow($1, $3); }
-  | '-' exp %prec UMINUS  { $$ = $2; /* Se reemplazo 0 por la expresión $2 */ }
+  | '-' exp %prec UMINUS  { $$ = -$2; /* Se reemplazo 0 por la expresión -$2 */ }
   | '(' exp ')'           { $$ = $2; }
   | NUM                   { $$ = $1; }
   ;
