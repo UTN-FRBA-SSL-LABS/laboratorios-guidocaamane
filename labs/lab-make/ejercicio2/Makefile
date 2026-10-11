@@ -10,6 +10,9 @@ all: $(PROGRAMA)
 # Regla para construir el scanner
 # Dependencias: scanner2.l (Flex genera lex.yy.c a partir de él)
 $(PROGRAMA): scanner2.l
+	flex scanner2.l
+	$(CC) lex.yy.c -o $(PROGRAMA)
+	
 	# TODO 1: Ejecutá Flex sobre scanner2.l para generar lex.yy.c
 	#         Comando: flex <archivo.l>
 
@@ -19,6 +22,7 @@ $(PROGRAMA): scanner2.l
 
 # Regla para limpiar archivos generados
 clean:
+	rm -f $(PROGRAMA) lex.yy.c 
 	# TODO 3: Eliminá el ejecutable y el archivo generado por Flex
 	#         Archivos a eliminar: $(PROGRAMA) y lex.yy.c
 	#         Usá rm -f
