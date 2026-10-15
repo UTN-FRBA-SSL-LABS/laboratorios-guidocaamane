@@ -39,9 +39,10 @@ int main(void) {
     assert(AreDecimalDigits("") == 0);
 
     /* ── Contains — descomentar cuando implementes la funcion ───────────── */
-    /* assert(Contains("hola", 'o') == 1); */
-    /* assert(Contains("hola", 'z') == 0); */
-    /* assert(Contains("", 'a') == 0); */
+    assert(Contains("hola", 'o') == 1);
+    assert(Contains("hola", 'z') == 0); 
+    assert(Contains("", 'a') == 0);
+    assert(Contains("empieza", 'e') == 1);
 
     return 0;
 }
