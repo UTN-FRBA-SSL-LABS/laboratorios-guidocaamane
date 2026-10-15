@@ -589,7 +589,7 @@ Salida esperada:
 ```
 
 ```
-LONGITUDES_PASA=NO
+LONGITUDES_PASA=SI
 ```
 _(SI o NO)_
 
