@@ -335,7 +335,7 @@ make test
 > R:Porque al consultar IsEmpty, intenta leer un valor en memoria 0 ocacionando un Segmentation Fault.
 
 ```
-GETLENGTH_PASA=
+GETLENGTH_PASA=SI
 ```
 _(escribí SI cuando todos los tests de GetLength pasen)_
 
