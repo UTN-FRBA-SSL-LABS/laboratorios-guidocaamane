@@ -10,6 +10,11 @@
  *   - Si todos los assert pasan, el programa termina silenciosamente con exit 0
  *   - Si alguno falla, abort() detiene el programa con exit != 0
  */
+int GetLength(const char *s) {
+    if (IsEmpty(s))
+        return 0;
+    return 1 + GetLength(s + 1);
+}
 
 int main(void) {
 
@@ -18,11 +23,11 @@ int main(void) {
     assert(IsEmpty("a") == 0);
     assert(IsEmpty("hola") == 0);
 
-    /* ── GetLength — descomentar cuando implementes la funcion ──────────── */
-    /* assert(GetLength("") == 0); */
-    /* assert(GetLength("a") == 1); */
-    /* assert(GetLength("hola") == 4); */
-    /* assert(GetLength("hola mundo") == 10); */
+    /* ── GetLength —──────────── */
+     assert(GetLength("") == 0); 
+     assert(GetLength("a") == 1); 
+     assert(GetLength("hola") == 4); 
+     assert(GetLength("hola mundo") == 10); 
 
     /* ── AreEqual — tiene un bug, estos tests ya estan activos ──────────── */
     assert(AreEqual("", "") == 1);

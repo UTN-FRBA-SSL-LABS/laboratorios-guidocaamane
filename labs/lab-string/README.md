@@ -328,11 +328,11 @@ make test
 
 **P2** — ¿Qué hace `s + 1`? ¿Por qué avanza al siguiente carácter y no al siguiente byte?
 
-> R:
+> R:Si avanza al siguiente byte. Suma en 1 el tamaño en bytes del puntero. No el valor numerico de 1. Al ser char avanza 1 byte. s + (1 * sizeof(*s))
 
 **P3** — Si llamaras a `GetLength(NULL)`, ¿qué pasaría? ¿Por qué las precondiciones del contrato dicen `s != NULL`?
 
-> R:
+> R:Porque al consultar IsEmpty, intenta leer un valor en memoria 0 ocacionando un Segmentation Fault.
 
 ```
 GETLENGTH_PASA=
