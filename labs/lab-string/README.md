@@ -277,7 +277,7 @@ Los tests de `IsEmpty` ya están activos en `StringTest.c`. Corré `make test` y
 
 **P1** — `IsEmpty` podría haberse escrito también como `return s[0] == '\0'`. ¿Son equivalentes? ¿Por qué?
 
-> R:
+> R: Son equivalentes ya que s[0] es simplemente un arreglo para obtener el valor al que apunta un puntero en memoria. s[0]= *(s+0)= *s
 
 ---
 
