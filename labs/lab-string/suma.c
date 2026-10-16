@@ -14,5 +14,13 @@
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
     /* TODO */
+    if (argv[1]==NULL) return 0;
+    
+    int suma=0;
+    
+    for (char **arg = argv + 1; *arg != NULL; arg++){
+        suma += ToInteger(*arg);
+    }  
+    printf ("%d\n" , suma);
     return 0;
 }
