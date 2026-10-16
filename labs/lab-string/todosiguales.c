@@ -14,5 +14,16 @@
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
     /* TODO */
+    if (argv[1]==NULL) return 0;
+    
+    char *comparar = argv[1];
+    
+    for (char **arg = argv + 2; *arg != NULL; arg++){
+        if (!AreEqual(*arg,comparar)) {
+            printf("0\n");
+            return 0;
+        }
+    }
+    printf("1\n");
     return 0;
 }
